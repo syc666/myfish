@@ -1,0 +1,18 @@
+#index_img,#index_img2,#canvas2,#canvas1{
+	
+	position: absolute;
+	left: 200px;
+	cursor: pointer;
+}
+#index_img{
+	z-index: 3;
+}
+#index_img2{
+	z-index: 0;
+}
+#canvas1{
+    z-index: 1;
+}
+#canvas2{
+	z-index: 2;
+}
