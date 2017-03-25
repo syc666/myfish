@@ -4,19 +4,18 @@ var ctx1;
 var ctx2;
 var lastTime = Date.now();
 var deltaTime = 0;
-// var bg_img=new Image();
 var canWidth;
 var canHeight;
 var mx;
 var my;
+
 var paoche;
 var allfish=[];
-var paodan;
-var z=1;
 var paocheTimer=0;
 var paocheCount=1;
 var bull=[];
 var ajiaodu=[];
+var seaweed=[];
 
     
 game();
@@ -38,33 +37,42 @@ function init(){
 
     paoche=new paocheObj();
     paoche.init();
-   for(var i=0;i<15;i++){
+   for(var i=0;i<30;i++){
      allfish[i]=new allfishObj();
      allfish[i].init();
    }
-    paodan=new paodanObj();
-    paodan.init();
-
+   for(var i=0;i<bull.length;i++){
+    bull[i].init();
+   }
+   for(var i=0;i<6;i++){
+   seaweed[i]=new seaweedObj();
+   seaweed[i].init(i);
+   }
 }
 
 function gameloop(){
 	 window.requestAnimationFrame(gameloop);
 	 ctx1.clearRect(0, 0, canWidth,canHeight);
-
-     for(var i=0;i<15;i++){
+     for(var i=0;i<6;i++){
+        seaweed[i].draw(i);
+     }
+     for(var i=0;i<30;i++){
         allfish[i].draw();
      }
-     
-	 ctx2.clearRect(0, 0, canWidth,canHeight);
+    
 
-     paodan.draw();
+	 ctx2.clearRect(0, 0, canWidth,canHeight);
+     for(var i=0;i<bull.length;i++){
+      bull[i].jiaodu=ajiaodu[i];
+      bull[i].draw();
+     }
      paoche.draw();
-   collision();
-      // 序列帧变化
+     collision();
+
+      // 序列帧变化 
     var now = Date.now();
     deltaTime = now - lastTime;
     lastTime = now;
-
 }
 
 function onMouseMove(e) {

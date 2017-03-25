@@ -13,9 +13,11 @@ paocheObj.prototype.init=function(){
        this.paocheyu[i].src = "./img/shot5000" + i + ".png";
     }
     this.angle=0;
+    
 }
 
 paocheObj.prototype.draw=function(){
+  //随着鼠标转动
     var deltaY = my - this.y;
     var deltaX = mx - this.x;
     var beta = Math.atan2(deltaY, deltaX)+Math.PI*0.5;
