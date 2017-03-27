@@ -47,7 +47,7 @@ allfishObj.prototype.draw=function(){
             this.fishTimer=0;
         }
        ctx1.save();
-       ctx1.drawImage(this.onefish[this.fishCount],this.x,this.y);
+       ctx1.drawImage(this.onefish[this.fishCount],this.x-20,this.y-20);
        ctx1.restore();
        if (this.fishCount==7) {
           this.init();
@@ -66,7 +66,7 @@ allfishObj.prototype.draw=function(){
       ctx1.translate(this.x,this.y);
       ctx1.rotate(this.angle+Math.PI);
       // 鱼的头部为坐标点
-      ctx1.drawImage(this.onefish[this.fishCount],-20,-this.onefish[3].height*0.5);
+      ctx1.drawImage(this.onefish[this.fishCount],-80,-this.onefish[3].height*0.5);
       ctx1.restore();
     
     }

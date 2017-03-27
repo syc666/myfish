@@ -1,5 +1,5 @@
-
-    can2.onclick=function(e){
+ can2.onclick=function(e){
+    if (!score.gameover) {
       //点击炮车图片的参数循环一次
       var timer=setInterval(function(){
         if (paocheCount<7) {
@@ -19,6 +19,18 @@
      bull.push(bu);
      bu.init();
      bu.draw();
- 
-    }
+
+     setTimeout(function(){
+      if (bu.alive==false) { score.scoreNum+=50;}
+     },1000)
+     
+  }
+}
+
+var play=document.getElementById('play');
+play.onclick=function(){
+  
+    location.reload();
+  
+}
 

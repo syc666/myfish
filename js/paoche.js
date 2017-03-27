@@ -28,5 +28,6 @@ paocheObj.prototype.draw=function(){
 	  ctx2.rotate(this.angle);
     ctx2.drawImage(this.paocheyu[paocheCount],-this.paocheyu[4].width*0.5,-this.paocheyu[4].width);
     ctx2.restore();
+    
 }
 

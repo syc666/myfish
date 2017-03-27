@@ -4,14 +4,20 @@
     <meta charset="utf-8">
 	<title>buyu</title>
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    
 </head>
 <body>
+<div class="wrap">
+    <h3>游戏结束时间：</h3><strong>60</strong>
     <audio src="img/1.mp3" id="audio1" hidden="true" autoplay="true" loop="true">
     </audio> 
     <img id="index_img" src="img/feng.jpg" width=800 height=600>
     <img id="index_img2" src="img/bei.jpg" width=800 height=600>
     <canvas id="canvas1" onselectstart="return false;" width=800 height=600></canvas>
     <canvas id="canvas2" onselectstart="return false;"  width=800 height=600></canvas>
+    <h2>重新开始:</h2><img id="play" src="img/play.png" id="play">
+</div>
     <script type="text/javascript" src="js/load.js"></script>
     <script type="text/javascript" src="js/commonFunctions.js"></script>
     <script type="text/javascript" src="js/bg.js"></script>
@@ -20,6 +26,10 @@
     <script type="text/javascript" src="js/paodan.js"></script>
     <script type="text/javascript" src="js/collision.js"></script>
     <script type="text/javascript" src="js/seaweed.js"></script>
+    <script type="text/javascript" src = "js/bowen.js"></script>
+    <script type="text/javascript" src="js/time.js"></script>
+    <script type="text/javascript" src="js/score.js"></script>
+    <script type="text/javascript" src="js/gold.js"></script>
     <script type="text/javascript" src="js/main.js"></script> 
     <script type="text/javascript" src="js/onclick.js"></script>
 </body>

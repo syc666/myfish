@@ -16,7 +16,9 @@ var paocheCount=1;
 var bull=[];
 var ajiaodu=[];
 var seaweed=[];
-
+var bowen;
+var score;
+var gold;
     
 game();
 function game() {
@@ -48,6 +50,12 @@ function init(){
    seaweed[i]=new seaweedObj();
    seaweed[i].init(i);
    }
+   bowen=new bowenObj();
+   bowen.init();
+   score=new scoreObj();
+   score.init();
+   gold=new goldObj();
+   gold.init();
 }
 
 function gameloop(){
@@ -59,7 +67,7 @@ function gameloop(){
      for(var i=0;i<30;i++){
         allfish[i].draw();
      }
-    
+    bowen.draw();
 
 	 ctx2.clearRect(0, 0, canWidth,canHeight);
      for(var i=0;i<bull.length;i++){
@@ -67,7 +75,10 @@ function gameloop(){
       bull[i].draw();
      }
      paoche.draw();
+     score.draw();
+     gold.draw();
      collision();
+
 
       // 序列帧变化 
     var now = Date.now();

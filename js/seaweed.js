@@ -11,7 +11,7 @@ var seaweedObj=function(){
 seaweedObj.prototype.init=function(a){
     this.x=0;
     this.y=0;
-    this.CLASS=['dongtai12000','dongtai44000','动态21000','动态24000','动态25000','动态26000'];
+    this.CLASS=['dongtai12000','dongtai44000','21000','24000','25000','26000'];
 
    for(var i=0;i<9;i++){
     	this.seaweedPic[i]=new Image();

@@ -1,11 +1,13 @@
-#index_img,#index_img2,#canvas2,#canvas1{
-	
+#index_img,#index_img2,#canvas2,#canvas1,.wrap{
+
 	position: absolute;
-	left: 200px;
 	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+	-moz-tap-highlight-color: transparent;
+
 }
 #index_img{
-	z-index: 3;
+	z-index: 12;
 }
 #index_img2{
 	z-index: 0;
@@ -15,4 +17,49 @@
 }
 #canvas2{
 	z-index: 2;
+}
+.wrap{
+    left: 200px;
+	width: 800px;
+	height: 600px;
+}
+h3{
+	position: absolute;
+	right: 40px;
+	z-index: 10;
+	filter:alpha(opacity=50); /*IE滤镜，透明度50%*/
+-moz-opacity:0.5; /*Firefox私有，透明度50%*/
+opacity:0.5;/*其他，透明度50%*/
+}
+strong{
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	z-index: 10;
+	filter:alpha(opacity=50); /*IE滤镜，透明度50%*/
+-moz-opacity:0.5; /*Firefox私有，透明度50%*/
+opacity:0.5;/*其他，透明度50%*/
+font-size: 20px;
+color:red;
+}
+h2{
+	position: absolute;
+	left: 30px;
+	top:515px;
+	z-index: 11;
+	color:white;
+	filter:alpha(opacity=50); /*IE滤镜，透明度50%*/
+-moz-opacity:0.5; /*Firefox私有，透明度50%*/
+opacity:0.5;/*其他，透明度50%*/
+}
+#play{
+	position: absolute;
+    left: 140px;
+    top:520px;
+    width: 60px;
+    height: 60px;
+    z-index: 11;
+    filter:alpha(opacity=70); /*IE滤镜，透明度50%*/
+-moz-opacity:0.7; /*Firefox私有，透明度50%*/
+opacity:0.7;/*其他，透明度50%*/
 }
